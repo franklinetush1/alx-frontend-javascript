@@ -11,5 +11,5 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         status,
         value: status === 'rejected' ? reason.toString() : value,
       })
-    ));
+    )));
 }
