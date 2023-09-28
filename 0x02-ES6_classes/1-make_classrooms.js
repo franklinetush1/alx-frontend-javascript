@@ -1,3 +1,4 @@
+import ClassRoom from "./0-classroom.js";
 const initializeRooms = () =>{
 		const array = [19,20,34];
 		const classarray = [];
@@ -6,3 +7,4 @@ const initializeRooms = () =>{
 		}
 		return(classarray);
 	}
+export default initializeRooms;
