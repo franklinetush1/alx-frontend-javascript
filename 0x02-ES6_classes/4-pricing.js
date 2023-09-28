@@ -1,6 +1,6 @@
 import Currency from './3-currency.js';
 
-	class Pricing {
+export default class Pricing {
   constructor(amount, currency) {
     
     if (typeof amount !== 'number') {
@@ -49,5 +49,3 @@ import Currency from './3-currency.js';
     return amount * conversionRate;
   }
 }
-
-export Default Pricing;
