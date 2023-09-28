@@ -50,4 +50,4 @@ import Currency from './3-currency.js';
   }
 }
 
-export Default Currency;
+export Default Pricing;
