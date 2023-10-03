@@ -1,4 +1,4 @@
-import getListStudents from "./0-get_list_students.js";
+import getListStudents from './0-get_list_students.js';
 
 export default function updateStudentGradeByCity(students, city, newGrades) {
   return students
@@ -6,10 +6,8 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
     .map((student) => {
       const gradeObj = newGrades.find((grade) => grade.studentId === student.id);
       if (gradeObj) {
-        student.grade = gradeObj.grade;
-      } else {
-        student.grade = 'N/A';
+        return { ...student, grade: gradeObj.grade };
       }
-      return student;
+      return { ...student, grade: 'N/A' };
     });
 }
