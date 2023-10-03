@@ -3,6 +3,13 @@ export default function cleanSet(set, startString) {
     return '';
   }
 
-  const filteredValues = Array.from(set).filter((value) => value.startsWith(startString));
-  return filteredValues.join('-');
+  const arr = [];
+
+  for (const item of set) {
+    if (item.startsWith(startString)) {
+      arr.push(item.substring(startString.length));
+    }
+  }
+
+  return arr.join('-');
 }
