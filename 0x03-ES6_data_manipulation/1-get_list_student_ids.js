@@ -1,9 +1,7 @@
-import getListStudents from './0-get_list_students.js';
-
 export default function getListStudentIds(arr) {
-  if (typeof (arr) !== 'object') {
+  if (!Array.isArray(arr)) {
     return [];
   }
-  const newarr = arr.map((index) => arr.indexOf(index));
-  return newarr;
+
+  return arr.map((student) => student.id);
 }
