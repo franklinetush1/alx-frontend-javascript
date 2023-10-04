@@ -1,10 +1,9 @@
-const obj = {firstName: "Guillaume", lastName: "Salva"};
-CRUD.insertRow(obj)
-// Insert row {firstName: "Guillaume", lastName: "Salva"}
 
-const updatedRow: RowElement = { firstName: "Guillaume", lastName: "Salva", age: 23 };
-CRUD.updateRow(newRowID, updatedRow);
-// Update row 125 {firstName: "Guillaume", lastName: "Salva", age: 23}
+import { RowID, RowElement } from './interface';
 
-CRUD.deleteRow(125);
-// Delete row id 125
+declare module 'crud.js' {
+  export function insertRow(row: RowElement): RowID;
+  export function deleteRow(rowId: RowID): void;
+  export function updateRow(rowId: RowID, row: RowElement): RowID;
+}
+
